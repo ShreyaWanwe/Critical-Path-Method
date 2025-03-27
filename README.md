@@ -1,43 +1,79 @@
-# Project Management Tool
+# Project-Management-Tool
+# Critical Path Method (CPM) in C++
 
-## 📌 Overview
-This project implements the **Critical Path Method (CPM)** for project management using **Graph Data Structures**. CPM helps identify the longest sequence of dependent tasks that determine the minimum time required to complete a project. By analyzing task dependencies and durations, this project assists in optimizing project scheduling and resource allocation.
+## 📌 Project Overview
+This project implements the **Critical Path Method (CPM)** using **C++**. It models project tasks as a **Directed Acyclic Graph (DAG)**, allowing you to compute the **longest path** (critical path) through task dependencies. This helps in determining the minimum time required to complete the project.
 
----
+## 🚀 Features
+✅ Task Management – Define tasks with unique IDs and durations  
+✅ Dependency Graph – Represent task dependencies using an adjacency list  
+✅ Cycle Detection – Ensures no cycles exist in the dependency graph  
+✅ Topological Sorting – Uses a queue-based approach for processing tasks  
+✅ Longest Path Calculation – Determines the critical path in the project  
+✅ Optimized Memory Usage – Uses dynamic arrays for efficient memory management  
 
-## 🏗 Problem Statement
-Develop a **project management tool** that models tasks as **graph nodes** and dependencies as **edges**. Implement the **Critical Path Method** to determine the **longest path of dependent tasks**, which dictates the minimum project duration.
+## 📂 Project Structure
+```
+|-- main.cpp  # Core implementation of the CPM algorithm
+|-- README.md # Project documentation
+```
 
----
+## 🛠️ Installation & Compilation
+### Prerequisites
+- **C++ Compiler** (GCC/MinGW/Clang/MSVC)
 
-## ⚙️ How CPM Works
-1. **Define Tasks & Dependencies:**  
-   Each task has a specific duration and may depend on others.
-2. **Construct a Directed Acyclic Graph (DAG):**  
-   Tasks are represented as **nodes**, and dependencies as **edges**.
-3. **Calculate the Critical Path:**  
-   The longest path in the DAG determines the **minimum time required** to complete the project.
-4. **Optimize Scheduling:**  
-   By focusing on critical tasks, delays can be minimized, and resource allocation can be improved.
+### Compilation Instructions
+#### Linux/macOS
+```sh
+g++ main.cpp -o cpm
+./cpm
+```
+#### Windows (MinGW)
+```sh
+g++ main.cpp -o cpm.exe
+cpm.exe
+```
 
----
+## 📖 How It Works
+1️⃣ **User Input** – Define number of tasks and their durations  
+2️⃣ **Add Dependencies** – Specify dependencies between tasks  
+3️⃣ **Graph Processing** – Build the **DAG** and check for cycles  
+4️⃣ **Longest Path Calculation** – Compute the **critical path** using **topological sorting**  
+5️⃣ **Display Output** – Print the longest path and minimum project duration  
 
-## 🛠 Data Structures Used
-The following **Data Structures** are used for implementing CPM:
-1. **Graph (Directed Acyclic Graph - DAG)**  
-2. **Array**  
-3. **Queue**  
-4. **Adjacency List**  
-5. **Auxiliary Arrays** (e.g., in-degree, maxPath, prevTask)
+## 📊 Example Usage
+### Input:
+```
+Enter the total number of tasks: 5
+Enter the duration for each task:
+Duration of Task 0: 3
+Duration of Task 1: 2
+Duration of Task 2: 4
+Duration of Task 3: 6
+Duration of Task 4: 5
+Enter the number of dependencies: 4
+Enter each dependency as: <FromTask> <ToTask> <Weight>
+Dependency 1: 0 1 2
+Dependency 2: 1 2 3
+Dependency 3: 2 3 2
+Dependency 4: 3 4 4
+```
 
----
+### Output:
+```
+Longest Path Length: 15 units of time
+Tasks in Longest Path (in reverse order): Task 4 Task 3 Task 2 Task 1 Task 0
+```
 
-## 🎯 Conclusion
-This project successfully demonstrates the **Critical Path Method (CPM)** using **graph-based modeling**. It helps in efficient project management by identifying critical tasks, optimizing time, and improving resource allocation. Future enhancements can include **real-time project tracking** and **dynamic task adjustments**.
+## 🛠️ Future Enhancements
+🚀 GUI for visualization of project scheduling  
+🚀 Support for multiple critical paths  
+🚀 Integration with real-world project management tools  
 
----
+## 🤝 Contributing
+We welcome contributions! Feel free to **fork** the repository, **create a pull request**, or **suggest improvements**.
 
-## 📝 Acknowledgment
-Special thanks to our **Data Structures Professor** for guidance and to our team members for their contributions to this project.  
+## 📩 Contact
+For any discussions or enhancements, reach out!
 
-📌 **For any queries, feel free to reach out!** 😊  
+⭐ If you like this project, don't forget to give it a **star**! ⭐
