@@ -1,5 +1,5 @@
 # Project-Management-Tool
-# Critical Path Method (CPM) in C++
+Critical Path Method (CPM) in C++
 
 ## 📌 Project Overview
 This project implements the **Critical Path Method (CPM)** using **C++**. It models project tasks as a **Directed Acyclic Graph (DAG)**, allowing you to compute the **longest path** (critical path) through task dependencies. This helps in determining the minimum time required to complete the project.
