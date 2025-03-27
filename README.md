@@ -20,7 +20,7 @@ This project implements the **Critical Path Method (CPM)** using **C++**. It mod
 
 ## 🛠️ Installation & Compilation
 ### Prerequisites
-- **C++ Compiler** (GCC/MinGW/Clang/MSVC)
+**C++ Compiler** (GCC/MinGW/Clang/MSVC)
 
 ### Compilation Instructions
 #### Linux/macOS
